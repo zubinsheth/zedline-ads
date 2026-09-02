@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8 Post-Update">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zedline Ads | Freelance ChatGPT Ads Consulting</title>
     <meta name="description" content="Get your brand recommended on ChatGPT. I am an independent freelance consultant helping businesses set up and explore conversational search ads on OpenAI Ads Manager.">
@@ -20,11 +20,39 @@
                             emerald: '#10a37f',
                             emeraldHover: '#0d8a6a'
                         }
+                    },
+                    animation: {
+                        'draw-check': 'stroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards',
+                        'scale-up': 'scaleUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards'
                     }
                 }
             }
         }
     </script>
+    <style>
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes scaleUp {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #10a37f;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        .animate-checkmark-tick {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+        }
+    </style>
 
     <!-- External Config File: Pulls GTM ID & Webhook URL dynamically -->
     <script src="config.js"></script>
@@ -32,7 +60,6 @@
     <!-- Google Tag Manager -->
     <script>
         (function(w,d,s,l){
-            // Read GTM ID from config.js, default to GTM-XXXXXXX if not set
             var gtmId = (w.ZEDLINE_CONFIG && w.ZEDLINE_CONFIG.gtmId) ? w.ZEDLINE_CONFIG.gtmId : 'GTM-XXXXXXX';
             w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -125,10 +152,10 @@
 
             <!-- RIGHT COLUMN: Secure Form Card (Col span 4) -->
             <div class="lg:col-span-4 flex items-center justify-center">
-                <div class="w-full bg-chatgpt-charcoal border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                <div class="w-full bg-chatgpt-charcoal border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden min-h-[460px] flex flex-col justify-center">
                     
                     <!-- Lead Capture State -->
-                    <div id="form-container">
+                    <div id="form-container" class="w-full">
                         <div class="mb-6">
                             <h3 class="text-lg font-bold text-white">Request a 15-Min Chat</h3>
                             <p class="text-xs text-zinc-400 mt-1">Let's discuss if ChatGPT Ads are a good fit for your business goals. I will personally review your website and offer honest feedback.</p>
@@ -159,19 +186,26 @@
                                 <input type="url" id="website" name="website" required class="w-full bg-chatgpt-slate border border-zinc-800 rounded-lg px-3.5 py-2 text-white text-xs focus:outline-none focus:border-chatgpt-emerald transition duration-150" placeholder="e.g. https://mybrand.com">
                             </div>
 
-                            <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg text-xs font-bold bg-chatgpt-emerald hover:bg-chatgpt-emeraldHover text-white transition-colors duration-150 shadow-lg shadow-chatgpt-emerald/10 mt-2">
-                                Request Free Consultation
+                            <button id="submit-btn" type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg text-xs font-bold bg-chatgpt-emerald hover:bg-chatgpt-emeraldHover text-white transition-colors duration-150 shadow-lg shadow-chatgpt-emerald/10 mt-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                                <span id="btn-text">Request Free Consultation</span>
+                                <svg id="btn-spinner" class="hidden animate-spin ml-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
                             </button>
                         </form>
                     </div>
 
-                    <!-- In-page Success State (Hidden by Default) -->
-                    <div id="form-success-message" class="hidden text-center py-6 space-y-4">
-                        <div class="w-12 h-12 bg-chatgpt-emerald/10 text-chatgpt-emerald rounded-full flex items-center justify-center mx-auto border border-chatgpt-emerald/20">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <!-- In-page Success State (With Beautiful Self-Drawing Green Animated Tick) -->
+                    <div id="form-success-message" class="hidden text-center py-6 space-y-4 animate-[scale-up_0.4s_ease-out_forwards] w-full">
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center relative">
+                            <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle class="animate-checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                                <path class="animate-checkmark-tick" fill="none" stroke="#10a37f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                            </svg>
                         </div>
                         <h4 class="text-lg font-bold text-white">Request Received!</h4>
-                        <p class="text-zinc-400 text-xs leading-relaxed">
+                        <p class="text-zinc-400 text-xs leading-relaxed max-w-sm mx-auto">
                             Thank you! Your request has been secured. As a freelance consultant, I review each request personally. I will study your website's baseline presence and reach out via email within 24 hours.
                         </p>
                     </div>
@@ -201,6 +235,15 @@
         document.getElementById('zedline-lead-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Halt page reload
 
+            // 1. Instantly trigger loading UI feedback
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnSpinner = document.getElementById('btn-spinner');
+            
+            submitBtn.disabled = true;
+            btnText.textContent = "Sending Request...";
+            btnSpinner.classList.remove('hidden');
+
             // Gather inputs
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
@@ -215,7 +258,7 @@
             // Secure origin parameter (Approach B - Domain Lock verification)
             const originDomain = window.location.origin;
 
-            // 1. Google Tag Manager Secure Push
+            // 2. Google Tag Manager Secure Push
             // Delivers event variables securely to GTM dataLayer for pixel tracking
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -229,29 +272,30 @@
                 }
             });
 
-            // 2. Google Sheets Webhook Dispatch (Approach B Safe Delivery)
-            // Assemble FormData payload to prevent CORS execution barriers in Google Apps Script
-            const formData = new FormData();
-            formData.append('name', name);
-            formData.append('email', email);
-            formData.append('phone', phone);
-            formData.append('website', website);
-            formData.append('origin', originDomain); // Crucial domain lock identifier
+            // 3. Google Sheets Webhook Dispatch (Bypass local CORS errors & FormData format issues)
+            // MUST use URLSearchParams instead of FormData. Google Apps Script cannot parse 
+            // multipart/form-data natively when submitted via Fetch with mode 'no-cors'.
+            const searchParams = new URLSearchParams();
+            searchParams.append('name', name);
+            searchParams.append('email', email);
+            searchParams.append('phone', phone);
+            searchParams.append('website', website);
+            searchParams.append('origin', originDomain); // Crucial domain lock identifier
 
             // Fire async POST dispatch
             fetch(WEBHOOK_URL, {
                 method: 'POST',
-                body: formData,
+                body: searchParams,
                 mode: 'no-cors' // Bypasses standard CORS preflight on third-party cloud apps
             })
             .then(() => {
-                // Display Success state safely
+                // Transition to animated checkmark success state
                 document.getElementById('form-container').classList.add('hidden');
                 document.getElementById('form-success-message').classList.remove('hidden');
             })
             .catch(error => {
                 console.error("Form transmission failed: ", error);
-                // Fallback to displaying success to visitor even on script delays
+                // Fallback to displaying success to visitor even on script delays or script errors
                 document.getElementById('form-container').classList.add('hidden');
                 document.getElementById('form-success-message').classList.remove('hidden');
             });
@@ -259,3 +303,29 @@
     </script>
 </body>
 </html>
+```
+
+---
+
+## Part 4: Updated Google Tag Manager Conversion Tag
+*(Replace your GTM "ChatGPT - Lead Created" custom HTML tag with this clean snippet)*
+
+Since we removed the dynamic budget range dropdown from the form, you should **completely strip the monetary values** out of your conversion signal. This ensures that only a clean lead signal flows to OpenAI, avoiding tracking fake values.
+
+Paste this simplified snippet inside your **`ChatGPT - Lead Created`** custom HTML tag in GTM:
+
+```html
+<!-- OpenAI Lead Created Event Tag (Clean Conversion Tracking) -->
+<script>
+  (function() {
+    // Fire the conversion event cleanly with a deduplication ID and no fake monetary values
+    oaiq('measure', 'lead_created', 
+      {
+        type: 'customer_action'
+      },
+      {
+        event_id: 'lead_' + new Date().getTime() // Deduplication ID matching form submit time
+      }
+    );
+  })();
+</script>
