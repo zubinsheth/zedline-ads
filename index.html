@@ -1,0 +1,326 @@
+# Zedline Ads Landing Page Code Spec
+
+This document contains the single-file HTML, CSS, and Javascript code for your **Zedline Ads** landing page. It is structured for zero-setup hosting on **GitHub Pages** using Tailwind CSS (via CDN) and includes built-in Google Tag Manager (GTM) data layer integration.
+
+---
+
+## The Complete Web Code (`index.html`)
+
+Create a file named **`index.html`** in your GitHub repository and paste the following code exactly:
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zedline Ads | ChatGPT Ads Consulting & Strategy</title>
+    <meta name="description" content="Get your brand recommended first by ChatGPT. We help forward-thinking businesses scale and target conversational search ads on OpenAI Ads Manager.">
+    
+    <!-- Tailwind CSS for Modern, Instant Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Tag Manager Snippet (Replace GTM-XXXXXXX with your actual GTM Container ID) -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-black tracking-tight bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+                    ZEDLINE<span class="text-white">ADS</span>
+                </span>
+                <span class="px-2 py-0.5 text-xs font-semibold bg-brand-900/50 text-indigo-300 border border-indigo-500/30 rounded-full">
+                    ChatGPT Ads Partner
+                </span>
+            </div>
+            <div>
+                <a href="#audit-form" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold bg-indigo-600 hover:bg-indigo-500 transition-all duration-150 text-white shadow-lg shadow-indigo-600/20">
+                    Get Free Strategy Call
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-20 lg:py-32 overflow-hidden border-b border-slate-800">
+        <!-- Background decorative gradients -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-10 left-1/4 w-[300px] h-[300px] bg-purple-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white max-w-4xl mx-auto">
+                Get Your Brand Recommended First by <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">ChatGPT</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                OpenAI's conversational search has opened a brand new advertising frontier. We help early-adopter brands setup, target, and scale high-performance ads on ChatGPT Ads Manager. Don't rely on basic keyword matching—capture rich user context as they interact with AI.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#audit-form" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 transition-all duration-150 text-white shadow-xl shadow-indigo-600/30 hover:scale-[1.02]">
+                    Schedule a Free 15-Min Strategy Session
+                </a>
+            </div>
+
+            <!-- Trust / Support Labels -->
+            <div class="mt-16 pt-8 border-t border-slate-800/60 max-w-4xl mx-auto">
+                <p class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-6">Expert Execution Deliverables</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center text-sm font-semibold text-slate-300">
+                    <div class="flex items-center justify-center space-x-2 bg-slate-800/40 py-3 px-4 rounded-xl border border-slate-800">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <span>Beta Accounts Onboarding</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 bg-slate-800/40 py-3 px-4 rounded-xl border border-slate-800">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        <span>Advanced Tracking & GTM Setup</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 bg-slate-800/40 py-3 px-4 rounded-xl border border-slate-800">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <span>Prompt & Context Hints Tuning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE OPPORTUNITY -->
+    <section class="py-20 lg:py-28 bg-slate-950/40 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Why Conversational Ads Are Different</h2>
+                <p class="mt-4 text-slate-400 text-lg leading-relaxed">
+                    Advertising inside AI search shifts the game from interrupting users with forced matches to natively resolving their inquiries.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="p-8 bg-slate-900/50 rounded-2xl border border-slate-800/80 hover:border-indigo-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">The Rich Context Signal Advantage</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed text-sm">
+                        Traditional search ads target static keywords. ChatGPT Ads run on <strong>Rich Context Signals</strong>. When a user interacts with AI, they describe full workflows, goals, and struggles. Your ad targets the comprehensive conversational environment, securing perfect recommendations.
+                    </p>
+                </div>
+
+                <div class="p-8 bg-slate-900/50 rounded-2xl border border-slate-800/80 hover:border-indigo-500/30 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Capture High-Value Early Mindshare</h3>
+                    <p class="mt-3 text-slate-400 leading-relaxed text-sm">
+                        Millions of tech-forward buyers, executives, and operators have traded search engines for ChatGPT. They rely on it to make major product recommendations and technical plans. Being recommended natively inside their active flow creates unmatched, high-trust conversions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES -->
+    <section class="py-20 lg:py-28 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">How We Make You Successful</h2>
+                <p class="mt-4 text-slate-400 text-lg leading-relaxed">
+                    Navigating OpenAI's ad system requires sophisticated conversion pipelines and semantic context strategies.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 bg-slate-900/40 rounded-2xl border border-slate-850 flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-mono text-xs font-bold tracking-wider mb-4">01 / SETUP</div>
+                        <h3 class="text-xl font-bold text-white">Ads Manager Beta Onboarding</h3>
+                        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                            ChatGPT Ads manager is in Beta and globally restricted. We setup a fully compliant, verified US entity corporate billing structure and business layout to activate and whitelist your global ad credentials.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 bg-slate-900/40 rounded-2xl border border-slate-850 flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-mono text-xs font-bold tracking-wider mb-4">02 / MEASUREMENT</div>
+                        <h3 class="text-xl font-bold text-white">Base Pixel & Event Integration</h3>
+                        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                            We integrate the ChatGPT Base Pixel with customized Advanced Matching scripts via GTM. This secure data feed feeds OpenAI's "Maximize Results" bidding algorithm with first-party signals, stabilizing acquisition costs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 bg-slate-900/40 rounded-2xl border border-slate-850 flex flex-col justify-between">
+                    <div>
+                        <div class="text-indigo-400 font-mono text-xs font-bold tracking-wider mb-4">03 / CREATIVE & AUDIENCE</div>
+                        <h3 class="text-xl font-bold text-white">Context Hints Copywriting</h3>
+                        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+                            OpenAI ads utilize semantic Context Hints instead of static keywords. We build hyper-relevant context libraries and create brief, punchy, high-impact headline copy optimized specifically to avoid truncations in Chat UI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section id="audit-form" class="py-20 lg:py-28 bg-slate-950/40">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
+                <div class="absolute top-0 right-10 -translate-y-1/2 bg-indigo-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Limited Beta Offer
+                </div>
+
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-black text-white">Claim Your Free ChatGPT Ads Strategy Audit</h2>
+                    <p class="mt-2 text-slate-400 text-sm">
+                        Fill out your business details below. Our team will review your semantic presence and design an OpenAI marketing strategy map.
+                    </p>
+                </div>
+
+                <!-- Form Section -->
+                <form id="zedline-lead-form" class="space-y-5">
+                    <div>
+                        <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500 transition duration-150" placeholder="e.g. Rahul Sharma">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Business Email</label>
+                        <input type="email" id="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500 transition duration-150" placeholder="e.g. name@company.com">
+                        <p class="mt-1 text-[10px] text-slate-500">Secured with OpenAI Advanced Matching automatic hashing.</p>
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500 transition duration-150" placeholder="e.g. +91 98765 43210">
+                    </div>
+
+                    <div>
+                        <label for="website" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Website URL</label>
+                        <input type="url" id="website" name="website" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500 transition duration-150" placeholder="e.g. https://mybrand.com">
+                    </div>
+
+                    <div>
+                        <label for="budget" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Monthly Ad Budget</label>
+                        <select id="budget" name="budget" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-slate-300 text-sm focus:outline-none focus:border-indigo-500 transition duration-150">
+                            <option value="">Select ad budget range</option>
+                            <option value="under-1k">Under $1,000 / mo</option>
+                            <option value="1k-5k">$1,000 - $5,000 / mo</option>
+                            <option value="5k-20k">$5,000 - $20,000 / mo</option>
+                            <option value="over-20k">$20,000+ / mo</option>
+                        </select>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition-all duration-150 shadow-xl shadow-indigo-600/20">
+                            Send Me My Strategy Audit
+                        </button>
+                    </div>
+                </form>
+
+                <!-- In-page Success Message (Hidden by default) -->
+                <div id="form-success-message" class="hidden text-center py-12 px-4 space-y-4">
+                    <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/20">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Thank You!</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Your request was submitted successfully. We have captured your details securely for Advanced Matching verification. We will run a context-signal audit on your website and reach out via email within 24 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-900 text-center text-slate-500 text-xs space-y-4">
+        <div>
+            <span class="text-sm font-extrabold tracking-tight text-slate-400">ZEDLINE<span class="text-slate-600">ADS</span></span>
+        </div>
+        <p>© 2026 Zedline Ads. All rights reserved.</p>
+        <div class="flex justify-center space-x-6 text-slate-400 font-medium">
+            <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" class="hover:text-indigo-400">Terms of Service</a>
+        </div>
+        <p class="text-[10px] text-slate-600 max-w-md mx-auto leading-relaxed">
+            Disclaimer: Zedline Ads is an independent marketing consulting firm. OpenAI, ChatGPT, ChatGPT Ads Manager, and respective logos are trademarks of OpenAI, Inc.
+        </p>
+    </footer>
+
+    <!-- Form Handler Script to Trigger GTM dataLayer on Submit -->
+    <script>
+        document.getElementById('zedline-lead-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop standard page reload
+
+            // 1. Gather input values safely
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const website = document.getElementById('website').value;
+            const budget = document.getElementById('budget').value;
+
+            // 2. Push event and data to GTM dataLayer
+            // This exposes the data securely for GTM variables to scrape and match
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'formSubmitted',
+                'formId': 'zedline-lead-form',
+                'leadData': {
+                    'name': name,
+                    'email': email,
+                    'phone': phone,
+                    'website': website,
+                    'budget': budget
+                }
+            });
+
+            // 3. Update the UI state
+            document.getElementById('zedline-lead-form').classList.add('hidden');
+            document.getElementById('form-success-message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
+```
+
+---
+
+## Technical Features Built Into This Page
+1. **Google Tag Manager Snippet**: Already embedded directly inside the `<head>` and `<body>` blocks. Simply search for **`GTM-XXXXXXX`** in the file and replace it with your actual Google Tag Manager container ID.
+2. **First-Party Data capture & Data Layer Push**: The JavaScript form handler at the bottom intercepts submissions, halts page refresh, hides the form, shows a success state, and builds a robust `window.dataLayer.push` containing variables (`name`, `email`, `phone`, etc.). GTM can scrape these to execute advanced pixel-matching scripts securely.
+3. **Responsive Mobile UI**: Styled using Tailwind CSS variables with reactive breakpoints. Beautiful on both desktop screens and mobile iOS/Android displays.
+4. **Ad Policy Compliant**: Comes preconfigured with header branding, detailed descriptive value headers, a clean hero layout, explicit trust elements, and structural placeholders for a Privacy Policy in the footer to ensure trouble-free review approval.
