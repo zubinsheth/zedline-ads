@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8 Post-Update">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zedline Ads | ChatGPT Ads Consulting & Strategy</title>
-    <meta name="description" content="Get your brand recommended first by ChatGPT. We help forward-thinking businesses scale and target conversational search ads on OpenAI Ads Manager.">
+    <title>Zedline Ads | Freelance ChatGPT Ads Consulting</title>
+    <meta name="description" content="Get your brand recommended on ChatGPT. I am an independent freelance consultant helping businesses set up and explore conversational search ads on OpenAI Ads Manager.">
     
     <!-- Tailwind CSS for Modern, Instant Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,20 +26,26 @@
         }
     </script>
 
-    <!-- Google Tag Manager Snippet (Replace GTM-XXXXXXX with your actual ID) -->
+    <!-- External Config File: Pulls GTM ID & Webhook URL dynamically -->
+    <script src="config.js"></script>
+
+    <!-- Google Tag Manager -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NZ275QH4');
+        (function(w,d,s,l){
+            // Read GTM ID from config.js, default to GTM-XXXXXXX if not set
+            var gtmId = (w.ZEDLINE_CONFIG && w.ZEDLINE_CONFIG.gtmId) ? w.ZEDLINE_CONFIG.gtmId : 'GTM-XXXXXXX';
+            w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+gtmId+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer');
     </script>
     <!-- End Google Tag Manager -->
 </head>
 <body class="bg-chatgpt-obsidian text-zinc-100 font-sans antialiased selection:bg-chatgpt-emerald selection:text-white lg:h-screen lg:overflow-hidden">
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ275QH4"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
@@ -52,67 +58,66 @@
                 <span class="text-xl font-black tracking-tight text-white">
                     ZEDLINE<span class="text-chatgpt-emerald">.ADS</span>
                 </span>
-                <span class="px-2.5 py-0.5 text-[10px] font-bold bg-chatgpt-emerald/10 text-chatgpt-emerald border border-chatgpt-emerald/20 rounded-full">
-                    Pioneers in India
+                <span class="px-2.5 py-0.5 text-[10px] font-bold bg-zinc-800 text-zinc-400 border border-zinc-700 rounded-full">
+                    Freelance Consultant
                 </span>
             </div>
             <div class="text-[11px] text-zinc-500 font-medium">
-                ChatGPT Ads Manager Support Beta
+                Independent ChatGPT Ads Guidance
             </div>
         </header>
 
         <!-- MAIN HERO & GRID (Scroll on mobile, static viewport lock on desktop) -->
         <main class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-auto py-8 overflow-y-auto lg:overflow-visible">
             
-            <!-- LEFT COLUMN: India Market Pitch (Col span 4) -->
+            <!-- LEFT COLUMN: Freelancer Pitch (Col span 4) -->
             <div class="lg:col-span-4 flex flex-col justify-center space-y-5">
                 <div class="inline-flex items-center space-x-2 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-1 w-fit">
                     <span class="flex h-2 w-2 relative">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-chatgpt-emerald opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-chatgpt-emerald"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-zinc-500"></span>
                     </span>
-                    <span class="text-[11px] font-bold tracking-wider text-zinc-300 uppercase">First-Mover Edge</span>
+                    <span class="text-[10px] font-bold tracking-wider text-zinc-400 uppercase">Independent & Transparent</span>
                 </div>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
-                    Run ChatGPT Ads <br class="hidden lg:inline">in India Today.
+                    Let's Explore <br class="hidden lg:inline">ChatGPT Ads.
                 </h1>
                 <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
-                    OpenAI hasn't officially launched Ads in India yet. We help forward-thinking Indian brands bypass geographical limitations, set up compliant USD billing, and capture rich user search intent before your competitors catch on.
+                    Hi, I am an independent freelance consultant. ChatGPT is rapidly changing how people search and buy. I help brands understand how to navigate, set up, and responsibly test ads on OpenAI's new manager so you can connect with customers where they already spend their time.
                 </p>
                 <div class="pt-2 border-t border-zinc-800/40 text-xs text-zinc-500">
-                    *Complete verification, tracking & target design.
+                    *Personalized support by a single human, not an agency.
                 </div>
             </div>
 
-            <!-- CENTER COLUMN: Service Pillars & Trust (Col span 4) -->
+            <!-- CENTER COLUMN: Honest Benefits & Help (Col span 4) -->
             <div class="lg:col-span-4 flex flex-col justify-center space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-500">The Blueprint</h2>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-500">How I Can Help Your Business</h2>
                 
                 <div class="space-y-3">
-                    <!-- Pillar 1 -->
+                    <!-- Benefit 1 -->
                     <div class="p-4 bg-chatgpt-charcoal rounded-xl border border-zinc-800/80 hover:border-chatgpt-emerald/30 transition duration-200">
-                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">01 / Account Workaround</div>
-                        <h3 class="text-sm font-bold text-white">Ad Account Creation & Whitelisting</h3>
+                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">01 / Reach Active Buyers</div>
+                        <h3 class="text-sm font-bold text-white">Be Up with the Times</h3>
                         <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
-                            We guide you step-by-step through setting up compliant USD billing profiles to activate your portal without delays.
+                            Millions of professionals and decision-makers are spending hours chatting with ChatGPT. I help you position your business right where active searching and planning happens.
                         </p>
                     </div>
 
-                    <!-- Pillar 2 -->
+                    <!-- Benefit 2 -->
                     <div class="p-4 bg-chatgpt-charcoal rounded-xl border border-zinc-800/80 hover:border-chatgpt-emerald/30 transition duration-200">
-                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">02 / Algorithmic Tracking</div>
-                        <h3 class="text-sm font-bold text-white">Advanced Pixel Matching (GTM)</h3>
+                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">02 / Measure Actual Business</div>
+                        <h3 class="text-sm font-bold text-white">Understand Your Results</h3>
                         <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
-                            We install the ChatGPT tracking SDK via GTM, routing browser conversions to feed OpenAI's "Maximize Results" system.
+                            No confusing corporate jargon. I'll integrate clear tracking codes on your website so you can easily see when a visitor submits a form coming directly from your ChatGPT ads.
                         </p>
                     </div>
 
-                    <!-- Pillar 3 -->
+                    <!-- Benefit 3 -->
                     <div class="p-4 bg-chatgpt-charcoal rounded-xl border border-zinc-800/80 hover:border-chatgpt-emerald/30 transition duration-200">
-                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">03 / Target Architecture</div>
-                        <h3 class="text-sm font-bold text-white">Context Hints & Prompt Strategy</h3>
+                        <div class="text-[10px] font-bold text-chatgpt-emerald uppercase tracking-wider mb-1">03 / Worry-Free Setup</div>
+                        <h3 class="text-sm font-bold text-white">Bypass the Configuration Headache</h3>
                         <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
-                            Forget flat keywords. We audit conversational themes and copy to seamlessly match active ChatGPT dialogues.
+                            Since OpenAI Ads is in Beta and restricted in India, setting it up involves technical workarounds. I walk you through creating a US billing profile to get you working smoothly.
                         </p>
                     </div>
                 </div>
@@ -125,19 +130,19 @@
                     <!-- Lead Capture State -->
                     <div id="form-container">
                         <div class="mb-6">
-                            <h3 class="text-lg font-bold text-white">Claim Your Free Audit</h3>
-                            <p class="text-xs text-zinc-400 mt-1">We'll review your website's conversational presence and design a tailored target map.</p>
+                            <h3 class="text-lg font-bold text-white">Request a 15-Min Chat</h3>
+                            <p class="text-xs text-zinc-400 mt-1">Let's discuss if ChatGPT Ads are a good fit for your business goals. I will personally review your website and offer honest feedback.</p>
                         </div>
 
                         <form id="zedline-lead-form" class="space-y-4">
                             <div>
                                 <label for="name" class="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1.5">Full Name</label>
-                                <input type="text" id="name" name="name" required class="w-full bg-chatgpt-slate border border-zinc-800 rounded-lg px-3.5 py-2 text-white text-xs focus:outline-none focus:border-chatgpt-emerald transition duration-150" placeholder="e.g. Amit Patel">
+                                <input type="text" id="name" name="name" required class="w-full bg-chatgpt-slate border border-zinc-800 rounded-lg px-3.5 py-2 text-white text-xs focus:outline-none focus:border-chatgpt-emerald transition duration-150" placeholder="e.g. Rahul Verma">
                             </div>
 
                             <div>
                                 <label for="email" class="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1.5">Business Email</label>
-                                <input type="email" id="email" name="email" required class="w-full bg-chatgpt-slate border border-zinc-800 rounded-lg px-3.5 py-2 text-white text-xs focus:outline-none focus:border-chatgpt-emerald transition duration-150" placeholder="e.g. amit@company.com">
+                                <input type="email" id="email" name="email" required class="w-full bg-chatgpt-slate border border-zinc-800 rounded-lg px-3.5 py-2 text-white text-xs focus:outline-none focus:border-chatgpt-emerald transition duration-150" placeholder="e.g. rahul@company.com">
                             </div>
 
                             <div>
@@ -155,7 +160,7 @@
                             </div>
 
                             <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg text-xs font-bold bg-chatgpt-emerald hover:bg-chatgpt-emeraldHover text-white transition-colors duration-150 shadow-lg shadow-chatgpt-emerald/10 mt-2">
-                                Send Me My Strategy Audit
+                                Request Free Consultation
                             </button>
                         </form>
                     </div>
@@ -165,9 +170,9 @@
                         <div class="w-12 h-12 bg-chatgpt-emerald/10 text-chatgpt-emerald rounded-full flex items-center justify-center mx-auto border border-chatgpt-emerald/20">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         </div>
-                        <h4 class="text-lg font-bold text-white">Audit Requested!</h4>
+                        <h4 class="text-lg font-bold text-white">Request Received!</h4>
                         <p class="text-zinc-400 text-xs leading-relaxed">
-                            Your request was received and secured. We are processing your domain variables and will deliver your custom ChatGPT Ads strategy map to your inbox within 24 hours.
+                            Thank you! Your request has been secured. As a freelance consultant, I review each request personally. I will study your website's baseline presence and reach out via email within 24 hours.
                         </p>
                     </div>
 
@@ -175,13 +180,18 @@
             </div>
         </main>
 
-        <!-- FOOTER -->
+        <!-- FOOTER & REGULATORY DISCLAIMERS -->
         <footer class="border-t border-zinc-850 pt-4 flex flex-col md:flex-row items-center justify-between text-[10px] text-zinc-600 space-y-2 md:space-y-0">
-            <div>
-                © 2026 Zedline Ads. All rights reserved. | <a href="#" class="hover:text-zinc-400">Privacy Policy</a>
+            <div class="space-y-1 text-center md:text-left">
+                <div>
+                    © 2026 Zedline Ads. Managed by an independent freelance consultant. | <a href="#" class="hover:text-zinc-400 underline">Privacy Policy</a>
+                </div>
+                <div class="text-[9px] text-zinc-700 leading-normal">
+                    Important Platform Notice: OpenAI Ads Manager is currently in a beta-testing phase. Platform availability, bidding features, and ad delivery structures are subject to changes and limitations beyond my control [4, 24].
+                </div>
             </div>
-            <div class="max-w-[700px] text-center md:text-right leading-relaxed text-[9px]">
-                Disclaimer: Zedline Ads is an independent marketing consulting firm. OpenAI, ChatGPT, ChatGPT Ads Manager, and respective logos are trademarks of OpenAI, Inc.
+            <div class="max-w-[500px] text-center md:text-right leading-normal text-[9px]">
+                Disclaimer: Zedline Ads is an independent freelance consulting project. We are not officially affiliated with, endorsed by, or partnered with OpenAI, Inc. ChatGPT, OpenAI Ads Manager, and their respective logos are trademarks of OpenAI, Inc.
             </div>
         </footer>
     </div>
@@ -197,9 +207,10 @@
             const phone = document.getElementById('phone').value || "Not Provided";
             const website = document.getElementById('website').value;
 
-            // Define Webhook Configuration
-            // PASTE YOUR GOOGLE SHEET WEB APP DEPLOYMENT URL HERE:
-            const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwPDzEsBtA8wVfZ1b9MLrNy3KPlqtEfNEYnEbHxJcSay0EsSu6CusIeXraCkflb6igm/exec"; 
+            // Define Webhook Configuration (Pulls from config.js dynamically)
+            const WEBHOOK_URL = (window.ZEDLINE_CONFIG && window.ZEDLINE_CONFIG.webhookUrl)
+                ? window.ZEDLINE_CONFIG.webhookUrl
+                : "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec";
 
             // Secure origin parameter (Approach B - Domain Lock verification)
             const originDomain = window.location.origin;
