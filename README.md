@@ -58,22 +58,19 @@ These visual touchpoints showcase the operational mechanics of the pipeline—co
 
 ### 1. Premium Obsidian UI (Frontend Experience)
 Designed to mirror OpenAI's ChatGPT visual guidelines. Built with an asymmetric grid layout, fitting 100% on a single screen (on desktop) to maximize focus and drive visual authority.
-*(Replace this placeholder with a screenshot of your live landing page showing the desktop three-column obsidian design)*
 ![Obsidian Dark Mode Interface](images/obsidian-landing-page.png)
 
 ### 2. Micro-Interactive Submission Loop & Google Sheet Datastore
 The moment a visitor submits a request, the CTA button dynamically disables and displays an active loading spinner to prevent double-submissions. Upon a successful webhook return, the form scales down to reveal an animated, self-drawing green checkmark.
-*(Replace this placeholder with a screenshot of your Google Sheet populated with real lead rows next to a screenshot of the animated emerald green checkmark)*
 ![Google Sheets Real-time Leads](images/sheets-database.png)
 
 ### 3. GTM Tag Switchboard (Platform Middleplane)
 Shows how Google Tag Manager triggers the OpenAI Base Pixel across all page view baselines, while dynamically passing a clean, budget-free conversion signal (`lead_created`) strictly on verified submissions [14, 16].
-*(Replace this placeholder with a screenshot of your Google Tag Manager tags and triggers workspace)*
-![GTM Workspace Configurations](images/gtm-tags.png)
+![GTM Workspace Configurations](images/gtm-tags-1.png)
+![GTM Workspace Configurations 2](images/gtm-tags-2.png)
 
 ### 4. OpenAI Ads Manager Event Stream (Backend Verification)
 Our conversion code has been rigorously validated using OpenAI's active **Event Stream Polling** tool [18]. It confirms GTM transmits conversion signals in a clean, 1-to-1 pattern (no duplicate events on page refreshes), enabling accurate algorithmic training [18].
-*(Replace this placeholder with a screenshot of your OpenAI Ads Manager Event Stream with verified incoming lead_created hits)*
 ![OpenAI Event Stream Polling](images/openai-event-stream.png)
 
 ---
