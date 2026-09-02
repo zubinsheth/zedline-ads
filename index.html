@@ -303,29 +303,3 @@
     </script>
 </body>
 </html>
-```
-
----
-
-## Part 4: Updated Google Tag Manager Conversion Tag
-*(Replace your GTM "ChatGPT - Lead Created" custom HTML tag with this clean snippet)*
-
-Since we removed the dynamic budget range dropdown from the form, you should **completely strip the monetary values** out of your conversion signal. This ensures that only a clean lead signal flows to OpenAI, avoiding tracking fake values.
-
-Paste this simplified snippet inside your **`ChatGPT - Lead Created`** custom HTML tag in GTM:
-
-```html
-<!-- OpenAI Lead Created Event Tag (Clean Conversion Tracking) -->
-<script>
-  (function() {
-    // Fire the conversion event cleanly with a deduplication ID and no fake monetary values
-    oaiq('measure', 'lead_created', 
-      {
-        type: 'customer_action'
-      },
-      {
-        event_id: 'lead_' + new Date().getTime() // Deduplication ID matching form submit time
-      }
-    );
-  })();
-</script>
